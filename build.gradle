@@ -52,7 +52,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}") {
         exclude module: "spring-boot-starter-tomcat"
     }
-    compile("org.springframework.boot:spring-boot-starter-jetty:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-jersey:${springBootVersion}")
 
     testCompile group: 'junit', name: 'junit', version: "$junitVersion"
 }
