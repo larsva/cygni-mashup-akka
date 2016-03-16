@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletionException;
 import java.util.stream.Stream;
@@ -47,6 +48,13 @@ public class JsonTraverser {
                 .put("id", id(mbData))
                 .put("description", description.orElse("Description not available"))
                 .set("albums", arrayNode().addAll(albums.collect(toList())));
+    }
+
+    public JsonNode createResult(final JsonNode mbData, final Optional<String> description, final List<JsonNode> albums) {
+        return objectNode()
+                .put("id", id(mbData))
+                .put("description", description.orElse("Description not available"))
+                .set("albums", arrayNode().addAll(albums));
     }
 
     public String id(final JsonNode identifiable) {

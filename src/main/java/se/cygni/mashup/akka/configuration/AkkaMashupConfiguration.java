@@ -35,7 +35,7 @@ public class AkkaMashupConfiguration extends ResourceConfig {
      */
     @Bean
     public ActorSystem actorSystem() {
-        ActorSystem system = ActorSystem.create("AkkaJavaSpring");
+        ActorSystem system = ActorSystem.create("Cygni-Mashup");
         SpringExtProvider.get(system).initialize(applicationContext);
         return system;
     }
