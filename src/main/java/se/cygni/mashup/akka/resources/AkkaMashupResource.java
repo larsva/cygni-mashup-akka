@@ -2,15 +2,10 @@ package se.cygni.mashup.akka.resources;
 
 import akka.actor.ActorSystem;
 import akka.dispatch.*;
-import akka.util.Timeout;
-import static akka.japi.Util.classTag;
-import static akka.pattern.Patterns.ask;
-import scala.concurrent.Future;
-import scala.concurrent.duration.FiniteDuration;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.glassfish.jersey.server.ManagedAsync;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import scala.concurrent.Future;
 import se.cygni.mashup.akka.common.AlbumNode;
 import se.cygni.mashup.akka.common.Description;
 import se.cygni.mashup.akka.common.JsonTraverser;
@@ -25,13 +20,10 @@ import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
+import static akka.japi.Util.classTag;
 import static se.cygni.mashup.akka.common.MashupFunctions.*;
 
 @Path("/mashup")
