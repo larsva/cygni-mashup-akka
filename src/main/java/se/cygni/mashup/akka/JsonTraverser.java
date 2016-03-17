@@ -50,10 +50,10 @@ public class JsonTraverser {
                 .set("albums", arrayNode().addAll(albums.collect(toList())));
     }
 
-    public JsonNode createResult(final JsonNode mbData, final Optional<String> description, final List<JsonNode> albums) {
+    public JsonNode createResult(final JsonNode mbData, String description, final List<JsonNode> albums) {
         return objectNode()
                 .put("id", id(mbData))
-                .put("description", description.orElse("Description not available"))
+                .put("description", description)
                 .set("albums", arrayNode().addAll(albums));
     }
 
