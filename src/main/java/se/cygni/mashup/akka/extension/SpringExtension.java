@@ -5,7 +5,6 @@ import akka.actor.ExtendedActorSystem;
 import akka.actor.Extension;
 import akka.actor.Props;
 import org.springframework.context.ApplicationContext;
-import se.cygni.mashup.akka.SpringActorProducer;
 
 /**
  * Created by lasse on 2016-03-12.

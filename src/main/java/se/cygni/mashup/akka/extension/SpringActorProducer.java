@@ -1,4 +1,4 @@
-package se.cygni.mashup.akka;
+package se.cygni.mashup.akka.extension;
 
 import akka.actor.Actor;
 import akka.actor.IndirectActorProducer;

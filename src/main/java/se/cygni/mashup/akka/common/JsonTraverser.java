@@ -1,4 +1,4 @@
-package se.cygni.mashup.akka;
+package se.cygni.mashup.akka.common;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -41,13 +41,6 @@ public class JsonTraverser {
 
     public JsonNode createError(final String error) {
         return objectNode().put("Error", error);
-    }
-
-    public JsonNode createResult(final JsonNode mbData, final Optional<String> description, final Stream<JsonNode> albums) {
-        return objectNode()
-                .put("id", id(mbData))
-                .put("description", description.orElse("Description not available"))
-                .set("albums", arrayNode().addAll(albums.collect(toList())));
     }
 
     public JsonNode createResult(final JsonNode mbData, String description, final List<JsonNode> albums) {

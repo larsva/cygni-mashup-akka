@@ -3,16 +3,12 @@ package se.cygni.mashup.akka.actors;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Status;
-import akka.actor.UntypedActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
-import akka.japi.pf.ReceiveBuilder;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
-import se.cygni.mashup.akka.JsonTraverser;
-
-import java.util.logging.Logger;
+import se.cygni.mashup.akka.common.JsonTraverser;
 
 /**
  * Created by lasse on 2016-03-15.
